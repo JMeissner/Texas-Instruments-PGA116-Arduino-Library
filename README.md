@@ -22,7 +22,7 @@ To install the library:
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/yourusername/Arduino-PGA116.git
+   git clone https://github.com/JMeissner/Arduino-PGA116.git
    ```
 
 2. Move the folder into your Arduino libraries directory.
