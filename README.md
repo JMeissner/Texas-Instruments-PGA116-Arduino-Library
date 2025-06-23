@@ -2,7 +2,7 @@
 
 An Arduino library for interfacing with the Texas Instruments PGA116 — a digitally controlled programmable gain amplifier with analog multiplexer.
 
-📖 [Product Datasheet](https://www.ti.com/product/de-de/PGA116)
+[Product Datasheet](https://www.ti.com/product/de-de/PGA116)
 
 ## Features
 
