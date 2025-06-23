@@ -1,62 +1,62 @@
-Arduino PGA116 Library
+# Arduino PGA116 Library
+
 An Arduino library for interfacing with the Texas Instruments PGA116 — a digitally controlled programmable gain amplifier with analog multiplexer.
 
-(https://www.ti.com/product/de-de/PGA116)
+📖 [Product Datasheet](https://www.ti.com/product/de-de/PGA116)
 
-Features
-Simple interface to control the PGA116 over SPI
+## Features
 
-Select input channel and gain with one command
+- Simple interface to control the PGA116 over SPI
+- Select input channel and gain with one command
+- Easy setup with standard Arduino SPI library
 
-Easy setup with standard Arduino SPI library
+## Requirements
 
-Requirements
-Arduino board (Uno, Mega, etc.)
+- Arduino IDE compatible board (tested on ESP32-C3 SuperMini)
+- PGA116 IC
+- SPI-compatible wiring
 
-PGA116 IC
+## Installation
 
-SPI-compatible wiring
-
-Arduino IDE (1.8.x or newer)
-
-Installation
 To install the library:
 
-Clone or download this repository:
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/yourusername/Arduino-PGA116.git
+   ```
 
-bash
-Kopieren
-Bearbeiten
-git clone https://github.com/yourusername/Arduino-PGA116.git
-Move the folder into your Arduino libraries directory.
+2. Move the folder into your Arduino libraries directory.
 
-Restart the Arduino IDE.
+3. Restart the Arduino IDE.
 
-Usage
-Include the library
-cpp
-Kopieren
-Bearbeiten
+## Usage
+
+### Include the library
+
+```cpp
 #include <SPI.h>
 #include "PGA116.h"
-Initialize the PGA116
+```
+
+### Initialize the PGA116
+
 The PGA116 uses a Chip Select (CS) pin to communicate over SPI. You can define this in the constructor:
 
-cpp
-Kopieren
-Bearbeiten
+```cpp
 PGA116 pga(10); // Using pin 10 for chip select
-Set Channel and Gain
-Use the SetChannelAndGain() method to choose the input channel (0–7) and gain setting (see datasheet for valid gain values).
+```
 
-cpp
-Kopieren
-Bearbeiten
+### Set Channel and Gain
+
+Use the `SetChannelAndGain()` method to choose the input channel (0–7) and gain setting (see datasheet for valid gain values).
+
+```cpp
 pga.SetChannelAndGain(3, 4); // Channel 3, Gain setting 4
-Example
-cpp
-Kopieren
-Bearbeiten
+```
+
+## Example
+
+```cpp
 #include <SPI.h>
 #include "PGA116.h"
 
@@ -70,3 +70,4 @@ void setup() {
 void loop() {
   // Your main code here
 }
+```
